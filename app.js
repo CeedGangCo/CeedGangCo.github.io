@@ -39,3 +39,10 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+//---MAIN CODE---
+
+const port = 3000;
+
+app.listen(port, () => console.log(`Example app listening on port #{port}!`));
