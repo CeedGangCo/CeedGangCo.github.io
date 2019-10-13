@@ -5,5 +5,10 @@
 </head>
 <body>
 	<h1>Upload a file</h1>
+	<form action="/upload" method="post" enctype="multipart/form-data">
+		<input type="text" name="fileName" placeholder="Enter File Name">
+		<input type="file" name="newFile">
+		<input type="submit" value="Upload!">
+	</form>
 </body>
 </html>
