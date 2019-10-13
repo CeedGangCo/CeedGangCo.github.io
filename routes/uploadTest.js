@@ -10,10 +10,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/getFile', function(req, res, next) {
+	console.log(req.query.fileName);
 	var options = {
   		root: __dirname + '/../uploads/'
   	}
-  	res.sendFile('testImage.png', options);
+  	res.sendFile(req.query.fileName, options);
 })
 
 module.exports = router;
