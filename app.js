@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var fileUpload = require('express-fileupload');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -23,6 +24,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/uploadTest', uploadTestRouter);
+
+app.use(fileUpload());
+app.post('/upload', function(req, res) {
+    if (!req.files || Object.keys(req.files).length == 0) {
+        return res.status(400).send('No files were uploaded.');
+    }
+    console.log(req.files.newFile);
+    
+    let file = req.files.newFile;
+    var name = file.name;
+    file.mv('uploads/'+name,function(err) {
+        if (err) {
+            return res.status(500).send(err);
+        }
+        res.send('File uploaded!');
+    });
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -45,6 +64,6 @@ module.exports = app;
 
 //---MAIN CODE---
 
-const port = 80;
+const port = 3000;
 
 app.listen(port, () => console.log(`Example app listening on port #{port}!`));
