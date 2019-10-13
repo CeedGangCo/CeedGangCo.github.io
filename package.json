@@ -8,8 +8,14 @@
   "dependencies": {
     "cookie-parser": "^1.4.4",
     "debug": "~2.6.9",
+<<<<<<< HEAD
     "express": "^4.17.1",
     "http-errors": "^1.7.3",
+=======
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.6-alpha.5",
+    "http-errors": "^1.6.3",
+>>>>>>> a81f3f2a036290a65893f3a78d253e3a8e725277
     "morgan": "^1.9.1",
     "package.json": "^2.0.1",
     "pug": "^2.0.4"

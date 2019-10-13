@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'CeedGang' });
+  var options = {
+  	root: __dirname + '/../views/'
+  }
+  res.sendFile('index.html', options);
 });
 
 module.exports = router;
