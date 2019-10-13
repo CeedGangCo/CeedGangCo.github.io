@@ -43,6 +43,6 @@ module.exports = app;
 
 //---MAIN CODE---
 
-const port = 3000;
+const port = 80;
 
 app.listen(port, () => console.log(`Example app listening on port #{port}!`));

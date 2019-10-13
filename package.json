@@ -9,6 +9,7 @@
     "cookie-parser": "^1.4.4",
     "debug": "~2.6.9",
     "express": "^4.16.4",
+    "express-fileupload": "^1.1.6-alpha.5",
     "http-errors": "^1.6.3",
     "morgan": "^1.9.1",
     "package.json": "^2.0.1",
