@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>BearComics</title>
+  <title>Bruin Comics</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="..\public\stylesheets\style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="FrontPageStyle.css">
 </head>
 
   <body>
- <nav class = "topNavigationBar">
-        <ul>
-            WELCOME To BearComics
-            
-            <button id = "nav1">login</button>
-            <button id = "nav1"> search </button>
-          <a href = "/uploadTest"><button id = "nav1"> upload </button></a>
-        </ul>
+    <div class = "container-fluid">
+      <div class = "row" class = "dropdown">
+          <div class="col-sm-12" id = "NavigationBar">
 
-    </nav>
-   
- 
-    <h2>Popular</h2>
-    
-    <h2>Most Artistic</h2>
-    
-    <h2>Genres</h2>
-    
-    <h4>Privacy Policy</h4>
-    
-    <h4>About</h4>
-    
-    <h4>User Settings</h4>
-    
+              <img src = "Logo.png" width = 240px height = 60px>
 
-</body>
+              <button id = "nav1"> Comics </button>
+
+              <button id="nav1"> Manga </button>
+
+              <button type="button" class="btn btn-primary disabled" id = "Divider"></button>
+
+              <button id = "nav1"> Creator's Guide </button>
+
+              <a href = "http://test.cbaguilar.me/uploadTest"><button id = "searchButton"> Upload </button></a>
+              
+              <button id = "nav1"> Log in </button>  
+
+              <button type="button" class="btn btn-info" id = "searchButton">
+                  <span class="glyphicon glyphicon-search"></span>
+              </button>
+
+          </div>
+      </div>
+    </div>
+  </body>
 
 </html>
-
-
